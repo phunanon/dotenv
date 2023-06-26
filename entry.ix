@@ -1,0 +1,6 @@
+(function dotenv
+  (-> (read-lines ".env")
+      (filter 0)
+      (map (part-when (= "=")))
+      (map (adj to-key))
+      dict))
